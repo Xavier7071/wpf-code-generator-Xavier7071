@@ -23,6 +23,15 @@ namespace wpf_code_generator_Xavier7071
         public MainWindow()
         {
             InitializeComponent();
+
+            var languages = new List<string>
+            {
+                "CSharp",
+                "Swift",
+            };
+
+            languagesList.ItemsSource = languages;
+            languagesList.SelectedIndex = 0;
         }
     }
 }
