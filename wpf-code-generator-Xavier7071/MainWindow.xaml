@@ -7,6 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Column="1" Margin="5">Nom de la main classe</TextBox>
+        <ComboBox x:Name="languagesList" Grid.Column="1" Grid.Row="1" Margin="5">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Grid.Column="0"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBox Grid.RowSpan="3" TextWrapping="Wrap" Margin="5">JSON</TextBox>
+        <Button Grid.Column="2" Margin="5">Convertir</Button>
+        <TextBlock Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Margin="5" TextWrapping="Wrap">Résultat</TextBlock>
     </Grid>
 </Window>
