@@ -15,6 +15,7 @@ public class GeneratorViewModel
 
         if (ErrorMessages[0].Length == 0 && ErrorMessages[1].Length == 0)
         {
+            ConvertedJson = parameters.Convert();
         }
     }
 }

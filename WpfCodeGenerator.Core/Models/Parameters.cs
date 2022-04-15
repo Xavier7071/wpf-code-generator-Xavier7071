@@ -1,12 +1,13 @@
-﻿using WpfCodeGenerator.Core.Validators;
+﻿using WpfCodeGenerator.Core.Services;
+using WpfCodeGenerator.Core.Validators;
 
 namespace WpfCodeGenerator.Core.Models;
 
 public class Parameters
 {
-    private string _json;
-    private string _className;
-    private string _language;
+    private readonly string _json;
+    private readonly string _className;
+    private readonly string _language;
 
     public Parameters(string json, string className, string language)
     {
@@ -24,5 +25,11 @@ public class Parameters
         errorMessages.Add(jsonValidator.Error);
 
         return errorMessages;
+    }
+
+    public string Convert()
+    {
+        var generatorService = new GeneratorService(_json, _className, _language);
+        return generatorService.ConvertedJson;
     }
 }
