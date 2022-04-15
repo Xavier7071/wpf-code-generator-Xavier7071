@@ -32,6 +32,7 @@ namespace wpf_code_generator_Xavier7071.Views
             var generatorViewModel = new GeneratorViewModel(json, className, language);
 
             DisplayErrors(generatorViewModel.ErrorMessages);
+            DisplayResult(generatorViewModel.ConvertedJson);
         }
 
         private void DisplayErrors(IReadOnlyList<string> errorMessages)
@@ -57,6 +58,11 @@ namespace wpf_code_generator_Xavier7071.Views
                 JsonLabel.Text = "JSON";
                 JsonLabel.Foreground = Brushes.Black;
             }
+        }
+
+        private void DisplayResult(string convertedJson)
+        {
+            ResultBlock.Text = convertedJson;
         }
     }
 }
