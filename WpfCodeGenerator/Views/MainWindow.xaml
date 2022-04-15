@@ -20,7 +20,7 @@
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
 
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center">Nom de la classe</TextBlock>
+        <TextBlock x:Name="ClassNameLabel" VerticalAlignment="Bottom" HorizontalAlignment="Center">Nom de la classe</TextBlock>
         <TextBox x:Name="ClassNameInput" Grid.Row="1" Grid.Column="0" Margin="5"></TextBox>
 
         <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center">Langage du générateur</TextBlock>
@@ -32,7 +32,7 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">JSON</TextBlock>
+        <TextBlock x:Name="JsonLabel" Grid.Row="2" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center">JSON</TextBlock>
         <TextBox x:Name="JsonInput" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" AcceptsReturn="True" TextWrapping="Wrap" Margin="5"></TextBox>
         
         <Button Grid.Column="2" Grid.Row="1" Margin="5" Click="Convert">Convertir</Button>

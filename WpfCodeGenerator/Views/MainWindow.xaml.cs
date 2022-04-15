@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Media;
 using WpfCodeGenerator.Core.ViewModels;
 
 namespace wpf_code_generator_Xavier7071.Views
@@ -29,6 +31,33 @@ namespace wpf_code_generator_Xavier7071.Views
             var className = ClassNameInput.Text;
             var language = LanguagesList.Text;
             var generatorViewModel = new GeneratorViewModel(json, className, language);
+
+            DisplayErrors(generatorViewModel.ErrorMessages);
+        }
+
+        private void DisplayErrors(IReadOnlyList<string> errorMessages)
+        {
+            if (errorMessages[0].Length != 0)
+            {
+                ClassNameLabel.Text = errorMessages[0];
+                ClassNameLabel.Foreground = Brushes.Red;
+            }
+            else
+            {
+                ClassNameLabel.Text = "Nom de la classe";
+                ClassNameLabel.Foreground = Brushes.Black;
+            }
+
+            if (errorMessages[1].Length != 0)
+            {
+                JsonLabel.Text = errorMessages[1];
+                JsonLabel.Foreground = Brushes.Red;
+            }
+            else
+            {
+                JsonLabel.Text = "JSON";
+                JsonLabel.Foreground = Brushes.Black;
+            }
         }
     }
 }
