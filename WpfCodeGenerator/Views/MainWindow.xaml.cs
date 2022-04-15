@@ -30,8 +30,8 @@ namespace wpf_code_generator_Xavier7071
                 "Swift",
             };
 
-            languagesList.ItemsSource = languages;
-            languagesList.SelectedIndex = 0;
+            LanguagesList.ItemsSource = languages;
+            LanguagesList.SelectedIndex = 0;
         }
     }
 }
