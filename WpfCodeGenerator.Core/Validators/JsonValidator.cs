@@ -5,7 +5,7 @@ namespace WpfCodeGenerator.Core.Validators;
 public class JsonValidator
 {
     public string Error { get; private set; }
-    
+
     public JsonValidator(string json)
     {
         Error = "";

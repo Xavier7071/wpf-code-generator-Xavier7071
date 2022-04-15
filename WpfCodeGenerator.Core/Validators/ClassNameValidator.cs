@@ -3,7 +3,7 @@
 public class ClassNameValidator
 {
     public string Error { get; private set; }
-    
+
     public ClassNameValidator(string className)
     {
         Error = "";

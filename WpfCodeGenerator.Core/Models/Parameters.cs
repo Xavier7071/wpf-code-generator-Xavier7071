@@ -22,7 +22,7 @@ public class Parameters
         var jsonValidator = new JsonValidator(_json);
         errorMessages.Add(classNameValidator.Error);
         errorMessages.Add(jsonValidator.Error);
-        
+
         return errorMessages;
     }
 }
