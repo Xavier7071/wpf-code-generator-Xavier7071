@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpf-code-generator-Xavier7071", "wpf-code-generator-Xavier7071\wpf-code-generator-Xavier7071.csproj", "{84972FBE-1875-4AC0-96E6-5030EAB1BDD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCodeGenerator", "WpfCodeGenerator\WpfCodeGenerator.csproj", "{84972FBE-1875-4AC0-96E6-5030EAB1BDD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCodeGenerator.Core", "WpfCodeGenerator.Core\WpfCodeGenerator.Core.csproj", "{F2131A8B-40C2-4FD9-BB1D-08B5B0BCD027}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{84972FBE-1875-4AC0-96E6-5030EAB1BDD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84972FBE-1875-4AC0-96E6-5030EAB1BDD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84972FBE-1875-4AC0-96E6-5030EAB1BDD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2131A8B-40C2-4FD9-BB1D-08B5B0BCD027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2131A8B-40C2-4FD9-BB1D-08B5B0BCD027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2131A8B-40C2-4FD9-BB1D-08B5B0BCD027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2131A8B-40C2-4FD9-BB1D-08B5B0BCD027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
