@@ -20,7 +20,7 @@
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
 
-        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center">Nom de la classe</TextBlock>
+        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center">Nom du namespace</TextBlock>
         <TextBox Grid.Row="1" Margin="5"></TextBox>
 
         <TextBlock Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center">Langage du générateur</TextBlock>
