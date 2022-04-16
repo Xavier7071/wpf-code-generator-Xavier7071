@@ -21,13 +21,7 @@ public class GeneratorService
         ConvertedJson = generator.StringBuilder.ToString();
     }
 
-    private static JsonElement ParseJson(string json)
-    {
-        var doc = JsonDocument.Parse(json);
-        return doc.RootElement;
-    }
-
-    private static List<string> GetNames(string className)
+    public static List<string> GetNames(string className)
     {
         for (var i = className.Length - 1; i > 0; i--)
         {
@@ -37,6 +31,13 @@ public class GeneratorService
                     className[..i], className[(i + 1)..]
                 };
         }
+
         return null!;
+    }
+
+    private static JsonElement ParseJson(string json)
+    {
+        var doc = JsonDocument.Parse(json);
+        return doc.RootElement;
     }
 }

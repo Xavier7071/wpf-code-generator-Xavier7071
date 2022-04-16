@@ -50,9 +50,11 @@ public class CSharpLanguageGenerator : LanguageGenerator
                 StringBuilder.Append($"         public bool {propertyName} ");
                 break;
             default:
-                StringBuilder.Append($"         public {jsonProperty.Value.ValueKind.ToString().ToLower()} {propertyName} ");
+                StringBuilder.Append(
+                    $"         public {jsonProperty.Value.ValueKind.ToString().ToLower()} {propertyName} ");
                 break;
         }
+
         StringBuilder.AppendLine("{ get; set; }");
     }
 
