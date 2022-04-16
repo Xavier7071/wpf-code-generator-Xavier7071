@@ -33,9 +33,19 @@ public class SwiftLanguageGenerator : LanguageGenerator
 
     protected override void BuildProperty(JsonProperty jsonProperty)
     {
-        StringBuilder.AppendLine(jsonProperty.Value.ValueKind == JsonValueKind.Number
-            ? $"    let {jsonProperty.Name}: Int"
-            : $"    let {jsonProperty.Name}: {jsonProperty.Value.ValueKind.ToString()}");
+        switch (jsonProperty.Value.ValueKind)
+        {
+            case JsonValueKind.Number:
+                StringBuilder.AppendLine($"    let {jsonProperty.Name}: Int");
+                break;
+            case JsonValueKind.True:
+            case JsonValueKind.False:
+                StringBuilder.AppendLine($"    let {jsonProperty.Name}: Bool");
+                break;
+            default:
+                StringBuilder.AppendLine($"    let {jsonProperty.Name}: {jsonProperty.Value.ValueKind.ToString()}");
+                break;
+        }
     }
 
     protected override void BuildArray(JsonProperty array)
@@ -49,6 +59,10 @@ public class SwiftLanguageGenerator : LanguageGenerator
                 break;
             case JsonValueKind.Number:
                 StringBuilder.AppendLine($"    let {array.Name}: [Int]");
+                break;
+            case JsonValueKind.True:
+            case JsonValueKind.False:
+                StringBuilder.AppendLine($"    let {array.Name}: [Bool]");
                 break;
             default:
                 StringBuilder.AppendLine($"    let {array.Name}: [{arrayElement.ValueKind.ToString()}]");
