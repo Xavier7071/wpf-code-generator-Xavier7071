@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf_code_generator_Xavier7071"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Générateur de code" Height="450" Width="800" MinHeight="450" MinWidth="450">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -44,6 +44,8 @@
         <Button Grid.Column="2" Grid.Row="1" Margin="5" Click="Convert">Convertir</Button>
 
         <TextBlock Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center">Résultat</TextBlock>
-        <TextBlock x:Name="ResultBlock" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2" Margin="5" TextWrapping="Wrap"></TextBlock>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Column="2" Grid.Row="3" Grid.RowSpan="2">
+            <TextBlock x:Name="ResultBlock" Margin="5"></TextBlock>
+        </ScrollViewer>
     </Grid>
 </Window>
